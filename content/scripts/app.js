@@ -12,14 +12,20 @@ const app = Vue.createApp({
             model: 'Tiguan',
             modelYear: 2008,
             mileage: 13500,
-            vehicleName: '',
             imageUrl: 'https://i.postimg.cc/N09fbtKZ/car1.jpg',
         }
+    },
+    computed: {
+        vehicleName() {
+            // can include conditionals,
+            // calls to REST api:s etc
+            return this.make + ' ' + this.model;
+        },
     },
     methods: {
 
         getVehicleName() {
-            this.vehicleName = `(${this.make} - ${this.model})`;
+            return `(${this.make} - ${this.model})`; 
         },
 
         setMake(event) {

@@ -52,7 +52,7 @@
       <section class="card">
         <div class="vehicle-item">
           <img
-            src="https://i.postimg.cc/N09fbtKZ/car1.jpg"
+            v-bind:src="imageUrl"
             alt=""
             class="thumbnail"
           />
@@ -65,10 +65,10 @@
         </div>
       </section>
       <p>
-        <button 
+        <!-- <button 
             v-on:click="getVehicleName"
             class="btn btn-outline-rounded">
-            Klicka här</button>
+            Klicka här</button> -->
       </p>
       <div class="mb-3">
         <input v-on:keyup.enter="setMake" type="text" placeholder="Tillverkare" />

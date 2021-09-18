@@ -13,6 +13,7 @@ const app = Vue.createApp({
             modelYear: 2008,
             mileage: 13500,
             vehicleName: '',
+            imageUrl: 'https://i.postimg.cc/N09fbtKZ/car1.jpg',
         }
     },
     methods: {

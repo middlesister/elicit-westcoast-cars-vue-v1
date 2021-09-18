@@ -26,8 +26,10 @@
       </div>
     </header>
     <main class="content" id="vehicle-admin">
-      <section><p>
-        <button v-on:click="onDisplayShowForm" class="btn btn-outline-rounded">Lägg till ny bil</button>
+      <section v-if="displayShowForm" ><p>
+        <button 
+            v-on:click="onDisplayShowForm"
+            class="btn btn-outline-rounded">Lägg till ny bil</button>
       </p></section>
       <section class="vehicle-form mb-6" v-if="displayForm">
         <form>

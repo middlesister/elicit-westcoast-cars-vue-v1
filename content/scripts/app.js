@@ -8,6 +8,7 @@ const app = Vue.createApp({
     data() {
         return {
             displayForm: false,
+            displayShowForm: true,
             regNo: 'MPJ076',
             make: 'Volkswagen',
             model: 'Tiguan',
@@ -34,6 +35,7 @@ const app = Vue.createApp({
         },
 
         onDisplayShowForm() {
+            this.displayShowForm = !this.displayShowForm;
             this.displayForm = true;
         }
 

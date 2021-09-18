@@ -7,14 +7,15 @@ const app = Vue.createApp({
     // has to return an object
     data() {
         return {
+            vehicles: [],
             displayForm: false,
             displayShowForm: true,
-            regNo: 'MPJ076',
-            make: 'Volkswagen',
-            model: 'Tiguan',
-            modelYear: 2008,
-            mileage: 13500,
-            imageUrl: 'https://i.postimg.cc/N09fbtKZ/car1.jpg',
+            regNo: '',
+            make: '',
+            model: '',
+            modelYear: '',
+            mileage: '',
+            imageUrl: '',
         }
     },
     computed: {
@@ -42,6 +43,21 @@ const app = Vue.createApp({
         addVehicle(event) {
             event.preventDefault();
             console.log('Spara bilen');
+            this.vehicles.push({
+                    regNo: this.regNo,
+                    make: this.make,
+                    model: this.model,
+                    modelYear: this.modelYear,
+                    milage: this.mileage,
+                    imageUrl: 'https://i.postimg.cc/N09fbtKZ/car1.jpg'
+            });
+            this.regNo = '';
+            this.make = '';
+            this.model = '';
+            this.modelYear = '';
+            this.mileage = '';
+
+            console.log(this.vehicles);
         },
 
         onCancelVehicle(event) {

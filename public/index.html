@@ -26,7 +26,10 @@
       </div>
     </header>
     <main class="content" id="vehicle-admin">
-      <section class="vehicle-form mb-6">
+      <section><p>
+        <button v-on:click="onDisplayShowForm" class="btn btn-outline-rounded">Lägg till ny bil</button>
+      </p></section>
+      <section class="vehicle-form mb-6" v-if="displayForm">
         <form>
           <div class="mb-3">
             <input type="text" placeholder="Registreringsnummer" />
@@ -68,11 +71,12 @@
         <!-- <button 
             v-on:click="getVehicleName"
             class="btn btn-outline-rounded">
-            Klicka här</button> -->
+            Klicka här</button> 
       </p>
       <div class="mb-3">
         <input v-on:keyup.enter="setMake" type="text" placeholder="Tillverkare" />
       </div>
+       -->
     </main>
     <script src="../content/scripts/app.js"></script>
   </body>

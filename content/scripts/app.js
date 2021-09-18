@@ -7,6 +7,7 @@ const app = Vue.createApp({
     // has to return an object
     data() {
         return {
+            displayForm: false,
             regNo: 'MPJ076',
             make: 'Volkswagen',
             model: 'Tiguan',
@@ -30,6 +31,10 @@ const app = Vue.createApp({
 
         setMake(event) {
             this.make = event.target.value;
+        },
+
+        onDisplayShowForm() {
+            this.displayForm = true;
         }
 
     }

@@ -42,7 +42,6 @@ const app = Vue.createApp({
 
         addVehicle(event) {
             event.preventDefault();
-            console.log('Spara bilen');
             this.vehicles.push({
                     regNo: this.regNo,
                     make: this.make,
@@ -56,8 +55,6 @@ const app = Vue.createApp({
             this.model = '';
             this.modelYear = '';
             this.mileage = '';
-
-            console.log(this.vehicles);
         },
 
         onCancelVehicle(event) {

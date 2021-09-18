@@ -66,18 +66,23 @@ const app = Vue.createApp({
             this.displayForm = false;
         },
 
-        loadAllVehicles() {
+        async loadAllVehicles() {
             // vehicles.forEach(vehicle) => {
 	        //    this.vehicles.push(vehicle);
             // });
 
             // this.vehicles = vehicles;
 
-            this.vehicles = vehicles.map((vehicle) => {
-                return vehicle;
-            });
+            // this.vehicles = vehicles.map((vehicle) => {
+            //     return vehicle;
+            // });
 
-            console.log(this.vehicles);
+            const response = await fetch('../data/vehicles.json');
+            const data = await response.json();
+
+            this.vehicles = data.map((vehicle) => {
+                 return vehicle;
+             });
         }
 
     }

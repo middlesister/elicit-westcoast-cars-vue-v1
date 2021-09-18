@@ -25,6 +25,9 @@ const app = Vue.createApp({
             return this.make + ' ' + this.model;
         },
     },
+    created() {
+        this.loadAllVehicles();
+    },
     methods: {
 
         getVehicleName() {

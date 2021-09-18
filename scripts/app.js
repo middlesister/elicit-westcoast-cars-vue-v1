@@ -46,7 +46,7 @@ const app = Vue.createApp({
         addVehicle(event) {
             event.preventDefault();
             this.vehicles.push({
-                    regNo: this.regNo,
+                    registrationNo: this.regNo,
                     make: this.make,
                     model: this.model,
                     modelYear: this.modelYear,

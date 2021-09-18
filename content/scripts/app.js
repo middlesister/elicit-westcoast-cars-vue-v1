@@ -12,12 +12,13 @@ const app = Vue.createApp({
             model: 'Tiguan',
             modelYear: 2008,
             mileage: 13500,
+            vehicleName: '',
         }
     },
     methods: {
 
         getVehicleName() {
-            return `(${this.make} - ${this.model})`;
+            this.vehicleName = `(${this.make} - ${this.model})`;
         }
     }
 

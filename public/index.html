@@ -59,11 +59,17 @@
           <div>{{ regNo }}</div>
           <div>{{ make }}</div>
           <div>{{ model }}</div>
-          <div>{{ getVehicleName() }}</div>
+          <div>{{ vehicleName }}</div>
           <div>{{ modelYear }}</div>
           <div>{{ mileage }}</div>
         </div>
       </section>
+      <p>
+        <button 
+            v-on:click="getVehicleName"
+            class="btn btn-outline-rounded">
+            Klicka här</button>
+      </p>
     </main>
     <script src="../content/scripts/app.js"></script>
   </body>

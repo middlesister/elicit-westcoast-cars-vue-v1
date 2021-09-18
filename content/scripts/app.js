@@ -19,7 +19,12 @@ const app = Vue.createApp({
 
         getVehicleName() {
             this.vehicleName = `(${this.make} - ${this.model})`;
+        },
+
+        setMake(event) {
+            this.make = event.target.value;
         }
+
     }
 
 });

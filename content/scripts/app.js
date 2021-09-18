@@ -37,6 +37,17 @@ const app = Vue.createApp({
         onDisplayShowForm() {
             this.displayShowForm = !this.displayShowForm;
             this.displayForm = true;
+        },
+
+        addVehicle(event) {
+            event.preventDefault();
+            console.log('Spara bilen');
+        },
+
+        onCancelVehicle(event) {
+            event.preventDefault();
+            this.displayShowForm = !this.displayShowForm;
+            this.displayForm = false;
         }
 
     }

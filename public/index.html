@@ -32,7 +32,7 @@
             class="btn btn-outline-rounded">Lägg till ny bil</button>
       </p></section>
       <section class="vehicle-form mb-6" v-if="displayForm">
-        <form>
+        <form v-on:submit="addVehicle">
           <div class="mb-3">
             <input type="text" placeholder="Registreringsnummer" />
           </div>
@@ -50,7 +50,7 @@
           </div>
           <div class="vehicle-form-two-button">
             <button type="submit" class="btn btn-outline-rounded">Spara</button>
-            <button class="btn btn-outline-rounded">Avbryt</button>
+            <button v-on:click="onCancelVehicle" class="btn btn-outline-rounded">Avbryt</button>
           </div>
         </form>
       </section>

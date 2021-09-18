@@ -34,19 +34,19 @@
       <section class="vehicle-form mb-6" v-if="displayForm">
         <form v-on:submit="addVehicle">
           <div class="mb-3">
-            <input type="text" placeholder="Registreringsnummer" />
+            <input v-model="regNo" type="text" placeholder="Registreringsnummer" />
           </div>
           <div class="mb-3">
-            <input type="text" placeholder="Tillverkare" />
+            <input  v-model="make" type="text" placeholder="Tillverkare" />
           </div>
           <div class="mb-3">
-            <input type="text" placeholder="Modell" />
+            <input v-model="model" type="text" placeholder="Modell" />
           </div>
           <div class="mb-3">
-            <input type="text" placeholder="Modell år" />
+            <input v-model="modelYear" type="text" placeholder="Modell år" />
           </div>
           <div class="mb-3">
-            <input type="text" placeholder="Antal km" />
+            <input v-model="mileage" type="text" placeholder="Antal km" />
           </div>
           <div class="vehicle-form-two-button">
             <button type="submit" class="btn btn-outline-rounded">Spara</button>

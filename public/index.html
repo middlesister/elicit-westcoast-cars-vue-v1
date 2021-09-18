@@ -64,7 +64,13 @@
           <div>{{ vehicle.mileage }}</div>
         </div>
       </section>
+      <p>
+        <button class="btn btn-outline-rounded" v-on:click="loadAllVehicles">
+          Hämta bilen
+        </button>
+      </p>
     </main>
-    <script src="../content/scripts/app.js"></script>
+    <script src="../scripts/vehicles.js"></script>
+    <script src="../scripts/app.js"></script>
   </body>
 </html>
